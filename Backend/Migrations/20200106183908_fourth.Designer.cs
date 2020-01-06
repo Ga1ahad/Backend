@@ -4,14 +4,16 @@ using Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Backend.Migrations
 {
     [DbContext(typeof(s15264Context))]
-    partial class s15264ContextModelSnapshot : ModelSnapshot
+    [Migration("20200106183908_fourth")]
+    partial class fourth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -166,30 +168,6 @@ namespace Backend.Migrations
                             IdPattern = 1,
                             IdUser = 1,
                             Name = "T-Shirt-2 "
-                        },
-                        new
-                        {
-                            IdClothing = 8,
-                            CreatedAt = new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "desc",
-                            IdBodyPart = 1,
-                            IdClothingType = 2,
-                            IdPattern = 1,
-                            IdUser = 2,
-                            Name = "T-Shirt-3 "
-                        },
-                        new
-                        {
-                            IdClothing = 9,
-                            CreatedAt = new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "desc",
-                            IdBodyPart = 1,
-                            IdClothingType = 2,
-                            IdPattern = 1,
-                            IdUser = 2,
-                            Name = "T-Shirt-4 "
                         });
                 });
 
@@ -359,48 +337,6 @@ namespace Backend.Migrations
                     b.HasIndex("IdClothing");
 
                     b.ToTable("Clothing_Suitcase");
-
-                    b.HasData(
-                        new
-                        {
-                            IdSuitcase = 1,
-                            IdClothing = 1
-                        },
-                        new
-                        {
-                            IdSuitcase = 1,
-                            IdClothing = 2
-                        },
-                        new
-                        {
-                            IdSuitcase = 1,
-                            IdClothing = 3
-                        },
-                        new
-                        {
-                            IdSuitcase = 2,
-                            IdClothing = 4
-                        },
-                        new
-                        {
-                            IdSuitcase = 2,
-                            IdClothing = 5
-                        },
-                        new
-                        {
-                            IdSuitcase = 2,
-                            IdClothing = 6
-                        },
-                        new
-                        {
-                            IdSuitcase = 3,
-                            IdClothing = 8
-                        },
-                        new
-                        {
-                            IdSuitcase = 3,
-                            IdClothing = 9
-                        });
                 });
 
             modelBuilder.Entity("Backend.Models.ClothingTag", b =>
@@ -502,29 +438,6 @@ namespace Backend.Migrations
                     b.HasIndex("IdUser");
 
                     b.ToTable("Suitcase");
-
-                    b.HasData(
-                        new
-                        {
-                            IdSuitcase = 1,
-                            IdTrip = 1,
-                            IdUser = 1,
-                            Name = "Suitcase-1 "
-                        },
-                        new
-                        {
-                            IdSuitcase = 2,
-                            IdTrip = 2,
-                            IdUser = 1,
-                            Name = "Suitcase-2 "
-                        },
-                        new
-                        {
-                            IdSuitcase = 3,
-                            IdTrip = 3,
-                            IdUser = 2,
-                            Name = "Suitcase-3 "
-                        });
                 });
 
             modelBuilder.Entity("Backend.Models.Tags", b =>
@@ -567,35 +480,6 @@ namespace Backend.Migrations
                         .HasName("Trip_pk");
 
                     b.ToTable("Trip");
-
-                    b.HasData(
-                        new
-                        {
-                            IdTrip = 1,
-                            CreatedAt = new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            End = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Trip-1 ",
-                            Start = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            IdTrip = 2,
-                            CreatedAt = new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            End = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Trip-2 ",
-                            Start = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            IdTrip = 3,
-                            CreatedAt = new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            End = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Trip-3 ",
-                            Start = new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("Backend.Models.User", b =>

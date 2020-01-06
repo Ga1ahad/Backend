@@ -467,22 +467,22 @@ namespace Backend.Models
             });
 
             modelBuilder.Entity<User>().HasData(
-    new User
-    {
-        IdUser = 1,
-        FirstName = "Artur",
-        LastName = "Pendragon",
-        Email = "qwert@gmail.com",
-        Password = "1234",
-        Salt = "wtf",
-        AvatarUrl = "url",
-        CreatedAt = new DateTime(2018, 09, 10),
-        DeletedAt = new DateTime(2019, 12, 10),
-        LastLogin = new DateTime(2019, 12, 10, 10, 30, 50)
+                new User
+                {
+                    IdUser = 1,
+                    FirstName = "Artur",
+                    LastName = "Pendragon",
+                    Email = "qwert@gmail.com",
+                    Password = "1234",
+                    Salt = "wtf",
+                    AvatarUrl = "url",
+                    CreatedAt = new DateTime(2018, 09, 10),
+                    DeletedAt = new DateTime(2019, 12, 10),
+                    LastLogin = new DateTime(2019, 12, 10, 10, 30, 50)
 
 
-    }
-    );
+                }
+            );
 
 
 
@@ -618,6 +618,179 @@ namespace Backend.Models
             IdPattern = 1
         }
    );
+
+            modelBuilder.Entity<User>().HasData(
+            new User
+            {
+                IdUser = 2,
+                FirstName = "Sherlock",
+                LastName = "Holmes",
+                Email = "asdf@gmail.com",
+                Password = "1234",
+                Salt = "wtf",
+                AvatarUrl = "url",
+                CreatedAt = new DateTime(2018, 09, 10),
+                DeletedAt = new DateTime(2019, 12, 10),
+                LastLogin = new DateTime(2019, 12, 10, 10, 30, 50)
+
+
+            }
+        );
+
+            modelBuilder.Entity<Clothing>().HasData(
+            new Clothing
+            {
+               IdClothing = 8,
+               Name = "T-Shirt-3 ",
+               IdClothingType = 2,
+               Description = "desc",
+               CreatedAt = new DateTime(2018, 09, 10),
+               DeletedAt = new DateTime(2019, 12, 10),
+               IdUser = 2,
+               IdBodyPart = 1,
+               IdPattern = 1
+            }
+            );
+                     modelBuilder.Entity<Clothing>().HasData(
+                new Clothing
+                {
+                    IdClothing = 9,
+                    Name = "T-Shirt-4 ",
+                    IdClothingType = 2,
+                    Description = "desc",
+                    CreatedAt = new DateTime(2018, 09, 10),
+                    DeletedAt = new DateTime(2019, 12, 10),
+                    IdUser = 2,
+                    IdBodyPart = 1,
+                    IdPattern = 1
+                }
+           );
+
+
+            modelBuilder.Entity<Trip>().HasData(
+                new Trip
+                {
+                    IdTrip = 1,
+                    Name = "Trip-1 ",
+                    Start = new DateTime(2019, 12, 10),
+                    End = new DateTime(2019, 12, 10),
+                    CreatedAt = new DateTime(2018, 09, 10),
+                    DeletedAt = new DateTime(2019, 12, 10)
+                }
+           );
+
+            modelBuilder.Entity<Trip>().HasData(
+                  new Trip
+                  {
+                      IdTrip = 2,
+                      Name = "Trip-2 ",
+                      Start = new DateTime(2019, 12, 10),
+                      End = new DateTime(2019, 12, 10),
+                      CreatedAt = new DateTime(2018, 09, 10),
+                      DeletedAt = new DateTime(2019, 12, 10)
+                  }
+             );
+
+            modelBuilder.Entity<Trip>().HasData(
+                new Trip    
+                {
+                  IdTrip = 3,
+                  Name = "Trip-3 ",
+                  Start = new DateTime(2019, 12, 10),
+                  End = new DateTime(2019, 12, 10),
+                  CreatedAt = new DateTime(2018, 09, 10),
+                  DeletedAt = new DateTime(2019, 12, 10)
+                }
+            );
+
+            modelBuilder.Entity<Suitcase>().HasData(
+               new Suitcase
+               {
+                   IdSuitcase = 1,
+                   Name = "Suitcase-1 ",
+                   IdUser = 1,
+                   IdTrip = 1
+               }
+           );
+
+                modelBuilder.Entity<Suitcase>().HasData(
+               new Suitcase
+               {
+                   IdSuitcase = 2,
+                   Name = "Suitcase-2 ",
+                   IdUser = 1,
+                   IdTrip = 2
+               }
+           );
+                modelBuilder.Entity<Suitcase>().HasData(
+               new Suitcase
+               {
+                   IdSuitcase = 3,
+                   Name = "Suitcase-3 ",
+                   IdUser = 2,
+                   IdTrip = 3
+               }
+           );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 1,
+              IdClothing = 1
+          }
+      );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 1,
+              IdClothing = 2
+          }
+      );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 1,
+              IdClothing = 3
+          }
+      );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 2,
+              IdClothing = 4
+          }
+      );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 2,
+              IdClothing = 5
+          }
+      );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 2,
+              IdClothing = 6
+          }
+      );
+                modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 3,
+              IdClothing = 8
+          }
+      );
+               modelBuilder.Entity<ClothingSuitcase>().HasData(
+          new ClothingSuitcase
+          {
+              IdSuitcase = 3,
+              IdClothing = 9
+          }
+      );
+
+
+
+
 
             OnModelCreatingPartial(modelBuilder);
         }

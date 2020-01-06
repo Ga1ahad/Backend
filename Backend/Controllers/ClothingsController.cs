@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Backend.Controllers
 {
 
-    [Route("api/clothing")]
+    [Route("api/{IdUser:int}/[controller]")]
     [ApiController]
     public class ClothingController : Controller
     {
@@ -20,15 +20,21 @@ namespace Backend.Controllers
             _context = context;
         }
         [HttpGet]
-        public IActionResult GetEmps()
+        public IActionResult GetClothings(int IdUser)
         {
 
-            return Ok(_context.Clothing.ToList());
+         
+            var clothings = from Clothing in _context.Clothing
+                                 where IdUser.Equals(Clothing.IdUser)
+                                 select Clothing;   
+
+            return Ok(clothings);
         }
 
-        [HttpGet("{IdClothing:int}")]
-        public IActionResult GetClothings(int id)
+        [HttpGet("{IdClothing:int}")]   
+        public IActionResult GetClothings(int IdUser, int id)
         {
+
             var cloth = _context.Clothing.FirstOrDefault(c => c.IdClothing == id);
             if (cloth == null)
             {
