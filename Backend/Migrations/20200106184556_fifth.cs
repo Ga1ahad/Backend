@@ -1,34 +1,34 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿//using System;
+//using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Backend.Migrations
-{
-    public partial class fifth : Migration
-    {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.InsertData(
-                table: "Clothing",
-                columns: new[] { "IdClothing", "CreatedAt", "DeletedAt", "Description", "IdBodyPart", "IdClothingType", "IdPattern", "IdUser", "Name" },
-                values: new object[] { 8, new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "desc", 1, 2, 1, 2, "T-Shirt-3 " });
+//namespace backend.migrations
+//{
+//    public partial class fifth : Migration
+//    {
+//        protected override void up(migrationbuilder migrationbuilder)
+//        {
+//            migrationbuilder.insertdata(
+//                table: "clothing",
+//                columns: new[] { "idclothing", "createdat", "deletedat", "description", "idbodypart", "idclothingtype", "idpattern", "iduser", "name" },
+//                values: new object[] { 8, new datetime(2018, 9, 10, 0, 0, 0, 0, datetimekind.unspecified), new datetime(2019, 12, 10, 0, 0, 0, 0, datetimekind.unspecified), "desc", 1, 2, 1, 2, "t-shirt-3 " });
 
-            migrationBuilder.InsertData(
-                table: "Clothing",
-                columns: new[] { "IdClothing", "CreatedAt", "DeletedAt", "Description", "IdBodyPart", "IdClothingType", "IdPattern", "IdUser", "Name" },
-                values: new object[] { 9, new DateTime(2018, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2019, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "desc", 1, 2, 1, 2, "T-Shirt-4 " });
-        }
+//            migrationbuilder.insertdata(
+//                table: "clothing",
+//                columns: new[] { "idclothing", "createdat", "deletedat", "description", "idbodypart", "idclothingtype", "idpattern", "iduser", "name" },
+//                values: new object[] { 9, new datetime(2018, 9, 10, 0, 0, 0, 0, datetimekind.unspecified), new datetime(2019, 12, 10, 0, 0, 0, 0, datetimekind.unspecified), "desc", 1, 2, 1, 2, "t-shirt-4 " });
+//        }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DeleteData(
-                table: "Clothing",
-                keyColumn: "IdClothing",
-                keyValue: 8);
+//        protected override void down(migrationbuilder migrationbuilder)
+//        {
+//            migrationbuilder.deletedata(
+//                table: "clothing",
+//                keycolumn: "idclothing",
+//                keyvalue: 8);
 
-            migrationBuilder.DeleteData(
-                table: "Clothing",
-                keyColumn: "IdClothing",
-                keyValue: 9);
-        }
-    }
-}
+//            migrationbuilder.deletedata(
+//                table: "clothing",
+//                keycolumn: "idclothing",
+//                keyvalue: 9);
+//        }
+//    }
+//}

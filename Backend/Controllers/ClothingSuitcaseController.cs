@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace Backend.Controllers
 {
 
-    [Route("api/{IdUser:int}/[controller]/{IdSuitcase:int}")]
+    [Route("api/users/{IdUser:int}/suitcases/{IdSuitcase:int}")]
     [ApiController]
-    public class ClothingSuitcaseController : Controller
+    public class ClothingSuitcaseController : Controller    
     {
         private readonly s15264Context _context;
 

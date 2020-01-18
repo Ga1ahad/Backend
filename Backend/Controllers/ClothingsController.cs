@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Backend.Controllers
 {
 
-    [Route("api/{IdUser:int}/[controller]")]
+    [Route("api/users/{IdUser:int}/[controller]")]
     [ApiController]
     public class ClothingController : Controller
     {
