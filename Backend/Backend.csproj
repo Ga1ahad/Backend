@@ -5,6 +5,7 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+    
   </PropertyGroup>
 
   <ItemGroup>
